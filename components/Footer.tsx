@@ -1,6 +1,7 @@
 // components/Footer.tsx
 import Link from 'next/link';
 import { JSX } from 'react';
+import AuthLink from './AuthLink';
 
 export default function Footer(): JSX.Element {
   return (
@@ -11,14 +12,25 @@ export default function Footer(): JSX.Element {
             <h3 className="font-bold text-2xl text-white mb-4">
               Santoso & Partner
             </h3>
-            <p className="text-gray-400">Your Trusted Partner in Tax Solutions.</p>
+            <p className="text-gray-400">
+              Your Trusted Partner in Tax Solutions.
+            </p>
+            <p className="text-gray-500 text-sm mt-4">
+              Jakarta | Surabaya | Singapura
+            </p>
           </div>
           <div>
             <h4 className="font-semibold text-white mb-4">Navigasi</h4>
             <ul className="space-y-2">
               <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-              <li><Link href="/services" className="hover:text-white">Layanan</Link></li>
+              <li><Link href="/services" className="hover:text-white">Services</Link></li>
+              <li><Link href="/teams" className="hover:text-white">Teams</Link></li>
               <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+              <li>
+                <AuthLink href="/blog/create" className="hover:text-white">
+                  Create Blog
+                </AuthLink>
+              </li>
             </ul>
           </div>
           <div>
@@ -26,7 +38,11 @@ export default function Footer(): JSX.Element {
             <div className="flex space-x-4">
               <a href="#" className="hover:text-white">LinkedIn</a>
               <a href="#" className="hover:text-white">Twitter</a>
+              <a href="#" className="hover:text-white">Medium</a>
             </div>
+            <p className="text-gray-500 text-sm mt-4">
+              Email: hello@santosopartner.co.id
+            </p>
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-500">
